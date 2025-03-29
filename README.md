@@ -2,7 +2,7 @@
 
 ![EV Demand Forecasting](https://img.shields.io/badge/Project-EV%20Demand%20Forecasting-blue) ![Python](https://img.shields.io/badge/Python-3.x-yellow) ![License](https://img.shields.io/badge/License-MIT-green)
 
-Welcome to **EV Demand Forecasting in India**! This project forecasts the demand for Electric Vehicles (EVs) in India using time-series analysis techniques. By analyzing historical vehicle registration data across various fuel types—Electric Vehicles (EVs), Hybrid, CNG, Petrol, and Diesel—we aim to predict future trends to support policymakers, industry stakeholders, and market analysts in shaping the future of sustainable transportation.
+This project forecasts the demand for Electric Vehicles (EVs) in India using time-series analysis techniques. By analyzing historical vehicle registration data across various fuel types—Electric Vehicles (EVs), Hybrid, CNG, Petrol, and Diesel—we aim to predict future trends to support policymakers, industry stakeholders, and market analysts in shaping the future of sustainable transportation.
 ---
 
 ## 🌟 Project Overview
