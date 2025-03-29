@@ -1,137 +1,141 @@
-Demand Forecasting of Electric Vehicles (EVs) in India
-A Time Series Analysis Project
-GitHub License
-Python Version
+# EV Demand Forecasting in India 🚗⚡
 
-Overview
-This project focuses on forecasting the demand for Electric Vehicles (EVs) in India using advanced time series analysis techniques. The study analyzes trends in vehicle registrations across different fuel types, including EVs, Hybrid, CNG, Petrol, and Diesel, to uncover patterns and predict future adoption rates. By leveraging robust statistical and machine learning models, this project provides actionable insights for policymakers, market analysts, and industry stakeholders to make data-driven decisions that shape the future of sustainable transportation in India.
+![EV Demand Forecasting](https://img.shields.io/badge/Project-EV%20Demand%20Forecasting-blue) ![Python](https://img.shields.io/badge/Python-3.x-yellow) ![License](https://img.shields.io/badge/License-MIT-green)
 
-Table of Contents
-Introduction
-Objectives
-Dataset Description
-Methodology
-Key Findings
-Technologies Used
-Project Structure
-How to Run the Code
-Future Scope
-Contributors
-References
-License
-Introduction
-The automotive industry in India is undergoing a significant transformation, driven by the rapid adoption of alternative fuel vehicles, particularly Electric Vehicles (EVs). This project aims to analyze historical vehicle registration data to forecast future trends in EV adoption. By identifying underlying patterns, seasonality, and relationships between different fuel types, the project contributes to a deeper understanding of the market dynamics and supports strategic decision-making for sustainable mobility solutions.
+Welcome to **EV Demand Forecasting in India**! This project forecasts the demand for Electric Vehicles (EVs) in India using time-series analysis techniques. By analyzing historical vehicle registration data across various fuel types—Electric Vehicles (EVs), Hybrid, CNG, Petrol, and Diesel—we aim to predict future trends to support policymakers, industry stakeholders, and market analysts in shaping the future of sustainable transportation.
+---
 
-Objectives
-The primary objectives of this project are:
+## 🌟 Project Overview
 
-Data Cleaning : Preprocess the dataset to handle inconsistencies, missing values, and outliers.
-Trend Identification : Detect long-term trends in vehicle registrations across various fuel types.
-Seasonality Analysis : Investigate periodic fluctuations in the data caused by factors like festivals, policy changes, or new model launches.
-Smoothing Techniques : Apply smoothing methods to reduce noise and highlight significant patterns.
-Model Selection and Evaluation : Identify optimal parameters for statistical and machine learning models and evaluate their performance using accuracy metrics.
-Forecasting : Predict future vehicle registrations to inform policy decisions and market strategies.
-Dataset Description
-The dataset used in this project contains historical vehicle registration data spanning several years. Key features include:
-
-Date : Timestamp of recorded observations.
-Fuel Categories : Counts for Electric Vehicles (EV), Hybrid, CNG, Petrol, Diesel, and other fuel types.
-Source: Parivahan.gov.in
-
-Methodology
-1. Data Preprocessing
-Removed inconsistencies, missing values, and outliers.
-Transformed the data into a format suitable for time series analysis.
-2. Exploratory Data Analysis (EDA)
-Decomposed the time series into trend , seasonal , and residual components.
-Applied smoothing techniques such as Simple Exponential Smoothing (SES), Double Exponential Smoothing (DES), and Triple Exponential Smoothing (TES).
-3. Stationarity Testing
-Used the Augmented Dickey-Fuller (ADF) Test to check for stationarity.
-Conducted Granger Causality Tests to identify relationships between different fuel types.
-4. Model Implementation
-Implemented advanced time series models:
-Vector AutoRegression (VAR) : Captured dynamic relationships between multiple fuel categories.
-ARIMA with Exogenous Variables (ARIMAX) : Incorporated external factors influencing the data.
-GARCH : Modeled volatility in the time series.
-5. Forecasting and Validation
-Generated forecasts for a 12-month period.
-Evaluated model performance using metrics like RMSE, MAE, MAPE, and MPE.
-Key Findings
-Granger Causality Results :
-CNG and Hybrid vehicle registrations strongly influence EV adoption.
-Petrol shows moderate causality at specific lags, while Diesel has no significant impact.
-Impulse Response Functions (IRF) :
-A shock in CNG sales positively impacts EV sales.
-Petrol sales negatively affect EV adoption in the short term.
-Hybrid sales exhibit a mixed relationship, serving as a bridge to EV adoption.
-Forecast Accuracy :
-The VAR model outperformed ARIMAX and GARCH in capturing interdependencies between fuel types and providing accurate predictions.
-Technologies Used
-Programming Language : Python
-Libraries :
-pandas, numpy for data manipulation.
-statsmodels for time series modeling.
-matplotlib, seaborn for visualization.
-sklearn for error metrics.
-Tools : Google Colab for implementation.
-Project Structure
-Copy
-1
-2
-3
-4
-5
-6
-├── data/                  # Contains raw and cleaned datasets
-├── notebooks/             # Jupyter notebooks for analysis and modeling
-├── scripts/               # Python scripts for preprocessing and modeling
-├── visualizations/        # Saved plots and charts
-├── README.md              # Project documentation
-└── requirements.txt       # List of required Python libraries
-How to Run the Code
-Clone the Repository :
-bash
-Copy
-1
-2
-git clone https://github.com/your-username/demand-forecasting-ev.git
-cd demand-forecasting-ev
-Install Dependencies :
-bash
-Copy
-1
-pip install -r requirements.txt
-Run the Notebooks :
-Open the Jupyter notebooks in the notebooks/ folder using Google Colab or your local environment.
-Generate Forecasts :
-Follow the instructions in the notebooks to preprocess the data, train the models, and generate forecasts.
-Future Scope
-Incorporate additional features such as fuel prices, GDP, and government incentives to enhance predictive power.
-Explore advanced machine learning models like LSTM or Transformers for capturing non-linear relationships.
-Analyze regional trends in vehicle registrations for a more granular understanding.
-Simulate the impact of policy changes on EV adoption.
-Extend the project to enable real-time forecasting using live data streams.
-Contributors
-Shobit Gupta (GitHub Profile )
-Saiyyam Lodaya (GitHub Profile )
-Sayantan Mukherjee (GitHub Profile )
-Guided by:
-
-Prof. Shruti Mathur
-References
-Dataset: Fuel Type and Vehicle Registration Trends.
-Source: Parivahan.gov.in
-Jason Brownlee, "Regression Metrics for Machine Learning."
-Source: Machine Learning Mastery
-Davide Burba, "An Overview of Time Series Forecasting Models."
-Source: Towards Data Science
-Statsmodels Documentation: Statistical Models for Time Series.
-Source: Statsmodels
-Seaborn and Matplotlib Documentation for Visualization.
-Source: Matplotlib | Seaborn
-License
-This project is licensed under the MIT License .
+The Indian automotive industry is witnessing a transformative shift toward sustainable fuel types, particularly EVs. This project leverages time-series methods to:
+- Analyze trends in vehicle registrations from multiple fuel categories.
+- Forecast future EV demand using advanced statistical models.
+- Provide actionable insights into the adoption of alternative fuel vehicles.
 
 
+## 📊 Dataset
 
+The dataset, sourced from [Parivahan.gov.in](https://parivahan.gov.in/), contains monthly vehicle registration counts in India across various fuel types, including:
+- `CNG ONLY`
+- `DIESEL`
+- `DIESEL/HYBRID`
+- `ELECTRIC(BOV)`
+- `PURE EV`
+- `PETROL/HYBRID`
+- And more (originally 24+ columns).
 
+Key features:
+- **Date**: Timestamp of observations.
+- **Fuel Categories**: Registration counts for EVs, Hybrids, CNG, Petrol, Diesel, etc.
+
+---
+
+## 🛠️ Methodology
+
+The forecasting pipeline involves the following steps:
+
+1. **Data Cleaning**:
+   - Handle missing values, outliers, and inconsistencies.
+   - Prepare a clean dataset for analysis.
+
+2. **Data Decomposition**:
+   - Decompose the time series into **trend**, **seasonality**, and **residuals** using `seasonal_decompose` (period = 12 months).
+
+3. **Stationarity Testing**:
+   - Use the **Augmented Dickey-Fuller (ADF)** test to ensure stationarity.
+   - Apply differencing where necessary (e.g., 1st differencing for Diesel, Petrol; 2nd differencing for EV, CNG).
+
+4. **Smoothing Techniques**:
+   - **Simple Exponential Smoothing (SES)**: For data without trends or seasonality.
+   - **Double Exponential Smoothing (DES)**: Incorporates trends.
+   - **Triple Exponential Smoothing (TES)**: Captures trends and seasonality.
+
+5. **Granger Causality**:
+   - Test relationships between fuel types (e.g., Petrol Granger-causes EV at lag 3; CNG strongly influences EV across all lags).
+
+6. **Modeling**:
+   - **Vector AutoRegression (VAR)**: Selected for its ability to model multivariate time series and interdependencies.
+   - **PCA**: Applied to reduce dimensionality and mitigate multicollinearity before VAR fitting.
+
+7. **Forecasting**:
+   - Predict EV registrations for the next 12 months using the VAR model.
+
+8. **Evaluation**:
+   - Compare VAR with ARIMA and GARCH using error metrics (MAE, RMSE, MAPE).
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Python 3.x
+- Libraries: `pandas`, `numpy`, `matplotlib`, `seaborn`, `statsmodels`, `sklearn`
+
+Install dependencies:
+```bash
+pip install pandas numpy matplotlib seaborn statsmodels scikit-learn
+```
+
+### Running the Project
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Say2hub/EV-Demand-Forecasting.git
+   cd EV-Demand-Forecasting
+   ```
+2. Add the dataset (e.g., `vehicle_registrations.xlsx`) to the root directory.
+3. Open the Google Colab notebook
+4. Run all cells to preprocess data, fit models, and visualize forecasts.
+
+---
+
+## 📈 Key Results
+
+- **Stationarity**: Most series (e.g., EV, CNG, Petrol) became stationary after differencing, confirmed by ADF tests (p < 0.05).
+- **Granger Causality**:
+  - **CNG → EV**: Strong causality across all lags (p ≈ 0.0000).
+  - **Petrol → EV**: Causality at lag 3 (p = 0.0176).
+  - **Hybrid → EV**: Strong causality at lags 3 and 4 (p = 0.0000).
+  - **Diesel → EV**: No significant causality.
+- **VAR Model Performance**:
+  - MAE: 7192.98
+  - RMSE: 19939.93
+  - R²: 0.83
+- **Forecast**: The 12-month EV sales forecast shows growth, influenced by CNG and Hybrid trends.
+
+### Visualizations
+- Historical vs. Forecasted EV Sales.
+- Impulse Response Functions (IRFs) showing EV response to shocks in CNG (positive), Petrol (negative), and Hybrid (mixed).
+
+---
+
+## ⚠️ Challenges & Improvements
+
+- **Challenges**:
+  - Incomplete data sections (e.g., missing error metrics for ARIMA/ARCH).
+  - Multicollinearity in the original dataset required PCA.
+- **Future Improvements**:
+  - Incorporate external factors (e.g., fuel prices, subsidies).
+  - Explore deep learning models like LSTM for non-linear patterns.
+  - Add regional granularity to the analysis.
+
+---
+
+## 📚 References
+
+- Dataset: [Parivahan.gov.in](https://parivahan.gov.in/)
+- Brownlee, J. "Regression Metrics for Machine Learning" - [Machine Learning Mastery](https://machinelearningmastery.com/)
+- Burba, D. "An Overview of Time Series Forecasting Models" - [Towards Data Science](https://towardsdatascience.com/)
+- [Statsmodels Documentation](https://www.statsmodels.org/)
+- [Matplotlib](https://matplotlib.org/) & [Seaborn](https://seaborn.pydata.org/) Documentation
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+⭐ **Star this repository if you find it useful!** Let’s accelerate the transition to sustainable mobility together! ⚡
+
+---
