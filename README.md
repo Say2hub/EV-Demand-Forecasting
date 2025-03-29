@@ -104,7 +104,11 @@ pip install pandas numpy matplotlib seaborn statsmodels scikit-learn
 
 ### Visualizations
 - Historical vs. Forecasted EV Sales.
+- ![image](https://github.com/user-attachments/assets/7e8edcb7-2594-4280-a839-57981a8faabb)
+
 - Impulse Response Functions (IRFs) showing EV response to shocks in CNG (positive), Petrol (negative), and Hybrid (mixed).
+-  ![image](https://github.com/user-attachments/assets/2454c0de-9067-4a3a-b177-ea9547b9feb4)
+
 
 ---
 
