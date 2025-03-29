@@ -99,13 +99,14 @@ pip install pandas numpy matplotlib seaborn statsmodels scikit-learn
   - **Diesel → EV**: No significant causality.
 - **VAR Model Performance**:
   - MAE: 7192.98
-  - RMSE: 19939.93
+  - RMSE: 10939.93
   - R²: 0.83
 - **Forecast**: The 12-month EV sales forecast shows growth, influenced by CNG and Hybrid trends.
 
 ### Visualizations
 - Historical vs. Forecasted EV Sales.
-- ![image](https://github.com/user-attachments/assets/7e8edcb7-2594-4280-a839-57981a8faabb)
+-![image](https://github.com/user-attachments/assets/7c584baa-27b5-421a-9cf0-524f10f7cb1b)
+
 
 - Impulse Response Functions (IRFs) showing EV response to shocks in CNG (positive), Petrol (negative), and Hybrid (mixed).
 -  ![image](https://github.com/user-attachments/assets/2454c0de-9067-4a3a-b177-ea9547b9feb4)
