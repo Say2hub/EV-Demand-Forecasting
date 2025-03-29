@@ -113,12 +113,7 @@ pip install pandas numpy matplotlib seaborn statsmodels scikit-learn
 
 ---
 
-## ⚠️ Challenges & Improvements
-
-- **Challenges**:
-  - Incomplete data sections (e.g., missing error metrics for ARIMA/ARCH).
-  - Multicollinearity in the original dataset required PCA.
-- **Future Improvements**:
+## Future Improvements
   - Incorporate external factors (e.g., fuel prices, subsidies).
   - Explore deep learning models like LSTM for non-linear patterns.
   - Add regional granularity to the analysis.
