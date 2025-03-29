@@ -108,7 +108,8 @@ pip install pandas numpy matplotlib seaborn statsmodels scikit-learn
 
 - Impulse Response Functions (IRFs) showing EV response to shocks in CNG (positive), Petrol (negative), and Hybrid (mixed).
 -  ![image](https://github.com/user-attachments/assets/2454c0de-9067-4a3a-b177-ea9547b9feb4)
-
+-  ![image](https://github.com/user-attachments/assets/4152aeec-3a5c-44c8-aeed-17c0fe3cfea0)
+-  ![image](https://github.com/user-attachments/assets/49f22898-f978-4f65-a95a-9a30757d48ed)
 
 ---
 
